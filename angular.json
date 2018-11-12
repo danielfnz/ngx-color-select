@@ -129,6 +129,41 @@
           }
         }
       }
+    },
+    "color-select": {
+      "root": "projects/color-select",
+      "sourceRoot": "projects/color-select/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/color-select/tsconfig.lib.json",
+            "project": "projects/color-select/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/color-select/src/test.ts",
+            "tsConfig": "projects/color-select/tsconfig.spec.json",
+            "karmaConfig": "projects/color-select/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/color-select/tsconfig.lib.json",
+              "projects/color-select/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-color-select"

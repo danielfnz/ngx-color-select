@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "color-select": [
+        "dist/color-select"
+      ],
+      "color-select/*": [
+        "dist/color-select/*"
+      ]
+    }
   }
 }
